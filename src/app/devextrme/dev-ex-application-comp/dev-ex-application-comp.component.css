@@ -1,0 +1,24 @@
+
+#gridContainer{
+    height: auto; 
+    background-color: rgb(247, 228, 206);
+    color:darkgreen;
+    border:2px solid brown;
+    border-radius: 10px;
+}
+#data-grid-demo{
+    height: auto;
+    background-color: rgb(162, 125, 197);
+    color:brown;
+    border-radius: 10px;
+}
+#grid{
+    height: auto;
+    background-color: rgb(120, 150, 151);
+    color:darkblue;
+    border-radius: 10px;
+}
+#clear{
+    height:100px;
+    width:150px;
+}

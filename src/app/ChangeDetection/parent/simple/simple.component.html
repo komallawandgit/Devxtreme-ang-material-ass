@@ -1,0 +1,22 @@
+
+     <h1>Change Detection</h1>
+     <hr>
+
+  <label>name:</label>
+  <input type="text" [(ngModel)]="person.name" class="form-control">
+  <hr>
+  <br>
+
+  <button class="btn btn-primary" (click)="person.age = person.age+1">+</button>
+      {{ person.age }}
+<button class="btn btn-warning" (click)="person.age = person.age-1">-</button>
+<hr>
+    <br />
+<button  class="btn btn-danger" (click)="reassign()">Re-Assign</button>
+<hr>
+
+   <app-simple-child [person]="person"></app-simple-child>
+
+
+
+    {{ person | json}}

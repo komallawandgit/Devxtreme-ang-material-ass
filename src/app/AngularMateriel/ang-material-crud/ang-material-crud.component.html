@@ -1,0 +1,138 @@
+<h1>Angular Material Crud</h1>
+<hr>
+
+
+
+<div class="example-header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)"placeholder="filter">
+    </mat-form-field>
+  </div>
+  <mat-table  #table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Id</mat-header-cell>
+            <mat-cell *matCellDef="let info"> {{info.id}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Fname">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Fist Name </mat-header-cell>
+              <mat-cell *matCellDef="let info"> {{info.Fname}} </mat-cell>
+            </ng-container>
+
+
+
+            <ng-container matColumnDef="Lname">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Last Name</mat-header-cell>
+                <mat-cell *matCellDef="let info"> {{info.Lname}} </mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="city">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>City </mat-header-cell>
+                  <mat-cell *matCellDef="let info"> {{info.city}} </mat-cell>
+                </ng-container>
+
+
+                <ng-container matColumnDef="State">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>State</mat-header-cell>
+                    <mat-cell *matCellDef="let info"> {{info.State}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="edit">     
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> edit </mat-header-cell>
+                    <mat-cell *matCellDef="let info" (click)="editdetail(info.id)">      
+                      <mat-icon>edit</mat-icon></mat-cell>   
+                  </ng-container>
+
+                <ng-container matColumnDef="delete">     
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> delete </mat-header-cell>
+                    <mat-cell *matCellDef="let info" (click)="deletedetail(model)">      
+                      <mat-icon>delete</mat-icon></mat-cell>   
+                  </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+      <hr>
+ 
+      <mat-paginator #paginator
+      [pageSize]="5"
+      [pageSizeOptions]="[5,10,15]"
+      [showFirstLastButtons]="true">
+    </mat-paginator>
+
+
+
+
+
+<div style="margin-left:20px;">
+  <h3>Angular Form pesronal info</h3>
+  <div class="example-container">
+    <form [formGroup]="infoForm"  (ngSubmit)="editId>0 ? update(model.id) : onSubmit()" class="example-form">
+
+      <div class="row">
+        <div class="col-md-6">
+            <p>
+                <mat-form-field  class="example-full-width">
+                  <mat-label>id</mat-label>
+                  <input matInput [ngModel]="model.id" formControlName="id" >
+                  <mat-error *ngIf="checkError('id', 'required')">id is required</mat-error>
+                  </mat-form-field>
+            </p>
+        </div>
+        <div class="col-md-6">
+            <p>
+                <mat-form-field  class="example-full-width">
+                    <mat-label>First Name</mat-label>
+                    <input matInput [ngModel]="model.Fname" formControlName="Fname" >
+                    <mat-error *ngIf="checkError('Fname', 'required')">Fname is required</mat-error>
+                    <mat-error *ngIf="checkError('Fname', 'minlength')">Fname should be more than 3 characters</mat-error>
+                    <mat-error *ngIf="checkError('Fname', 'maxlength')">Fname should be less than 20 characters</mat-error>
+                  </mat-form-field>
+            </p>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+            <p>
+                <mat-form-field  class="example-full-width">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput [ngModel]="model.Lname" formControlName="Lname" >
+                    <mat-error *ngIf="checkError('Lname', 'required')">Lname is required</mat-error>
+                    <mat-error *ngIf="checkError('Lname', 'minlength')">Lname should be more than 3 characters</mat-error>
+                    <mat-error *ngIf="checkError('Lname', 'maxlength')">Lname should be less than 20 characters</mat-error>
+                    </mat-form-field>
+                    </p>
+                </div>
+        <div class="col-md-6">
+            <p>
+                <mat-form-field  class="example-full-width">
+                    <mat-label>city</mat-label>
+                    <input matInput [ngModel]="model.city" formControlName="city" >
+                    <mat-error *ngIf="checkError('city', 'required')">city is required</mat-error>
+                    <mat-error *ngIf="checkError('city', 'minlength')">city should be more than 3 characters</mat-error>
+                    <mat-error *ngIf="checkError('city', 'maxlength')">city should be less than 20 characters</mat-error>
+                  </mat-form-field>
+            </p>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+         <div class="col-md-6">
+              <p>
+                  <mat-form-field  class="example-full-width">
+                    <mat-label>State</mat-label>
+                        <input matInput [(ngModel)]="model.State" formControlName="State">
+                        <mat-error *ngIf="checkError('State', 'required')">State is required</mat-error>
+                        <mat-error *ngIf="checkError('State', 'maxlength')">State should be less than 200 characters</mat-error>
+                  </mat-form-field>
+              </p> 
+            </div>
+        </div>
+        <button type="submit" [disabled]="!infoForm.valid" value="{{ editId>0 ? 'Update' : 'Submit' }}" >Save </button>
+    </form>
+    </div>
+  </div>
+  

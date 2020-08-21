@@ -1,0 +1,21 @@
+<h1>Devextreme Datagrid</h1>
+<h3> client Details</h3>
+<hr>
+
+<dx-data-grid   id="gridDemo" [dataSource]="dataSource" keyExpr="ID"
+[allowColumnReordering]="true"  [repaintChangesOnly]="true" >
+
+<dxo-export [enabled]="true" fileName="Client" [allowExportSelectedData]="true">
+</dxo-export>
+
+<dxo-selection mode="multiple"></dxo-selection>
+    <dxo-search-panel [visible]="true"[highlightCaseSensitive]="true"></dxo-search-panel>
+    <dxo-paging [pageSize]="5"></dxo-paging>
+    <dxo-pager 
+        [showPageSizeSelector]="true"
+        [allowedPageSizes]="[5,10,15]"
+        [showInfo]="true">
+    </dxo-pager>
+
+
+</dx-data-grid>

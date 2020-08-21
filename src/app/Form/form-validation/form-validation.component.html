@@ -1,0 +1,45 @@
+<h1>Form Validation</h1>
+<hr>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="container">
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm" novalidate>
+     <div class="form-group">
+     <label for="id">Id</label>
+     <input autocomplete="off" type="text" class="form-control" name="id" [(ngModel)]="model2.id" #id="ngModel" [ngClass]="{ 'is-invalid': f.submitted && id.invalid }" required />
+     <div *ngIf="f.submitted && id.invalid" class="invalid-feedback">
+     <div *ngIf="id.errors.required">id is required</div>
+     </div>
+     </div> 
+     <div class="form-group">
+     <label for="firstName">FirstName</label>
+     <input  autocomplete="off" type="text" class="form-control" name="firstName" [(ngModel)]="model2.firstName" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+     <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+     <div *ngIf="firstName.errors.required">First Name is required</div>
+     </div>
+     </div>
+     <div class="form-group">
+     <label for="lastName">Last Name</label>
+     <input autocomplete="off"  type="text" class="form-control" name="lastName" [(ngModel)]="model2.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+     <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+     <div *ngIf="lastName.errors.required">Last Name is required</div>
+     </div>
+     </div>
+     <div class="form-group">
+     <label for="email">Email</label>
+     <input autocomplete="off"  type="text" class="form-control" name="email" [(ngModel)]="model2.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
+     <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+     <div *ngIf="email.errors.required">Email is required</div>
+     <div *ngIf="email.errors.email">Email must be a valid email address</div>
+     </div>
+     </div>
+     <div class="form-group">
+     <button class="btn btn-primary btn-lg" *ngIf="!isUpdate" >Submit</button>
+     <button *ngIf="isUpdate" (click)="update(model2.id)">update</button>
+     </div>
+   </form>
+ </div>
+  </div>
+  <div class="col-md-2"></div>
+</div>

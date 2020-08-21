@@ -1,0 +1,45 @@
+{
+    "client":[
+        {
+          "id":1,
+          "Name":"anya",
+          "address":"pune",
+          "state":"maharashtra",
+          "zipcode":411036,
+          "age":25
+        },
+        {
+            "id":2,
+            "Name":"tanya",
+            "address":"mumbai",
+            "state":"maharashtra",
+            "zipcode":411036,
+            "age":23
+          },
+          {
+            "id":3,
+            "Name":"tanish",
+            "address":"mumbai",
+            "state":"maharashtra",
+            "zipcode":411036,
+            "age":27
+          },
+
+          {
+            "id":3,
+            "Name":"SHASHI",
+            "address":"mumbai",
+            "state":"maharashtra",
+            "zipcode":411036,
+            "age":25
+          },
+          {
+            "id":4,
+            "Name":"tanya",
+            "address":"mumbai",
+            "state":"maharashtra",
+            "zipcode":411036,
+            "age":25
+          }
+      ]
+}

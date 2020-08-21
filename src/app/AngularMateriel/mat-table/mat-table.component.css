@@ -1,0 +1,28 @@
+
+  .example-header{
+    background-color: rgb(206, 219, 219);
+    color:white;
+    padding:5px;
+    border: 1px solid gray;
+  }
+  
+ h1{
+   margin-top: 5px;
+   padding:5px;
+ }
+
+  
+ mat-table{
+   width:700px !important;
+   height:400px !important;
+  
+ } 
+
+
+ 
+
+
+/* mat-paginator{
+   position: absolute;
+   margin-bottom: 5px;
+ } */

@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.dx-popup-wrapper > .dx-overlay-content {
+    border: 1px solid #ddd;
+    background: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    border-radius: 6px;
+
+    height: auto !important;
+    z-index: 0 !important;
+    margin: auto !important;
+    left: 37% !important;
+    top: 29% !important;
+    transform: none !important;
+    transition: none 0s ease 0s;
+    opacity: 1 !important;
+}
+
+#gridContainer[_ngcontent-c4] {
+    height: 400px !important;
+    background-color: aquamarine;
+    color: blueviolet;
+    border:1px solid black !important ; 
+}
+
+dx-datagrid-rowsview .dx-datagrid-content:not(.dx-datagrid-content-fixed) {
+    min-height: 50% !important;
+}
+/* .dx-scrollable-content {
+    height:400px !important;
+} */
+
+#gridContainer{
+    height: 400px !important;
+}
+
+.dx-overlay-wrapper{
+    /* z-index: 1501; */
+    /* position: fixed; */
+    /* left: 0px; */
+    /* top: 0px; */
+    /* transform: translate(0px, 0px); */
+  
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    border-radius: 6px;
+
+    height: auto !important;
+ 
+    left: 10%!important;
+    top: 5% !important;
+ 
+
+    opacity: 1 !important;
+}
+html, body { height: 100%;width:100%}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

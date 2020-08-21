@@ -1,0 +1,11 @@
+form{
+    height:50%;
+    width:40%;
+    left: 50%;
+    top: 50%;
+    margin-left: -20%;
+    position: absolute;
+    margin-top: -12%;
+    border:1px solid gray;
+
+}

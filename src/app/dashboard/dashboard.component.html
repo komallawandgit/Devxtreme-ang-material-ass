@@ -1,0 +1,143 @@
+<mat-toolbar color="primary" class="example-toolbar">
+<button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
+  <h1 class="example-app-name ">Nested Menus</h1>
+  <button mat-button class="text-light btn-success align-right " (click)="logout()">Logout</button>
+  </mat-toolbar>
+
+<mat-sidenav-container class="example-container" autosize>
+	<mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true">
+		<mat-nav-list>
+        <mat-list-item  opened="false" (click)="showSubmenu = !showSubmenu " class="parent bg-colorNavMenu" (click)="hideDashbord()" >
+          <span class=" bg-colorNavMenu" *ngIf="isExpanded || isShowing " >Dashboard</span> 
+          <mat-icon mat-list-icon class="bg-colorNavMenu"  >home</mat-icon>
+          <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon> 
+      </mat-list-item>
+        
+      <div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="isShowing || isExpanded">
+          <a mat-list-item routerLink="dynamicElement">Dynamic Angular Element Demo</a>
+          <a mat-list-item routerLink="lazyOne" routerLinkActive="active">Lazy Loading</a>
+          <a mat-list-item routerLink="childtoparent" routerLinkActive="active">Child To Parent Data Sharing</a>
+          <a mat-list-item  routerLink="simpleCD" routerLinkActive="active">Change Detection</a>
+          <a mat-list-item routerLink="ButtonCD" routerLinkActive="active">Button Change Detection</a>
+          <a mat-list-item routerLink="ListNumberCdOb" routerLinkActive="active">Change Detection With Observable </a>
+          <a mat-list-item routerLink="formValidation" routerLinkActive="active">Form Validation </a>
+      </div>
+
+
+      <mat-list-item (click)="showSubSubMenu = !showSubSubMenu" class="parent bg-colorNavMenu">
+        <span class="full-width" *ngIf="isExpanded || isShowing">Devextreme</span>
+        <mat-icon class="menu-button bg-colorNavMenu" [ngClass]="{'rotated' : submenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+      </mat-list-item>
+				<div class="submenu" [ngClass]="{'expanded' : showSubSubMenu}" *ngIf="isShowing || isExpanded">
+            <a  mat-list-item routerLink="DevExtrem" routerLinkActive="active">Devextreme Crud </a>
+            <a  mat-list-item routerLink="DevDataGrid" routerLinkActive="active">Devextreme Datagrid</a>
+            <a  mat-list-item routerLink="pivotGrid" routerLinkActive="active">Devextreme pivotGrid</a>
+            <a  mat-list-item routerLink="DevxtremeSummary" routerLinkActive="active">Devextreme Group Data Summary</a>
+        </div>
+
+
+        <mat-list-item (click)="showSubSubsubMenu = !showSubSubsubMenu" class="showSubSubsubMenu bg-colorNavMenu">
+					<span class="full-width bg-colorNavMenu" *ngIf="isExpanded || isShowing">Angular Material</span>
+					<mat-icon class="menu-button bg-colorNavMenu" [ngClass]="{'rotated' : submenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+				</mat-list-item>
+          <div class="submenu" [ngClass]="{'expanded' : showSubSubsubMenu}" *ngIf="isShowing || isExpanded">
+            <a  mat-list-item routerLink="MatTable" routerLinkActive="active">Angular Material Table</a>
+            <a mat-list-item routerLink="AngMatForm"routerLinkActive="active">Angular Material Form</a>
+            <a mat-list-item routerLink="angMatValidation"  routerLinkActive="active">Angular Material Validation</a>
+            <a mat-list-item routerLink="AngMatCrUD"  routerLinkActive="active">Angular Material Crud</a>
+            <a mat-list-item routerLink="AngMaterialTableCrudComponent" routerLinkActive="active"> Angular Material Demo</a>
+             
+          </div>
+		</mat-nav-list>
+
+  </mat-sidenav>
+ <div class="example-sidenav-content">
+       <router-outlet class="routerClass"></router-outlet>  
+	 
+	</div>
+
+</mat-sidenav-container>
+
+
+
+<!-- Copyright 2017 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+  <app-topnav class="fixed-topnav" fxHide.gt-xs></app-topnav> 
+
+<mat-sidenav-container>
+    <mat-sidenav #appDrawer mode="over" opened="false">
+      <mat-nav-list >
+         <app-nav-menu-itemlist *ngFor="let item of navItems" [item]="item"></app-nav-menu-itemlist> 
+      </mat-nav-list >
+    </mat-sidenav >
+    <app-topnav fxHide.xs></app-topnav>
+    <router-outlet>
+        <h1> dashborad router outlet</h1>
+    </router-outlet>
+    <div fxFlex></div>
+    <span class="version-info">Current build: {{version.full ? version.full : version}}</span>
+  </mat-sidenav-container> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+ <div class="sidebar sidenav">
+
+        
+            <a routerLink="/DashBoard" routerLinkActive="active">DashBoard</a>
+         
+            <a routerLink="/DashBoard/dynamicElement" routerLinkActive="active">Dynamic Angular Element Demo</a>
+            
+              <a routerLink="/lazyOne" routerLinkActive="active">Lazy Loading </a>
+            
+              <a routerLink="/childtoparent" routerLinkActive="active">Child To Parent Data Sharing</a>
+            
+              <a routerLink="/simpleCD" routerLinkActive="active">Change Detection</a>
+           
+              <a routerLink="/ButtonCD" routerLinkActive="active">Button Change Detection</a>
+           
+              <a routerLink="/ListNumberCdOb" routerLinkActive="active">Change Detection With Observable </a>
+              <a routerLink="/formValidation" routerLinkActive="active">Form Validation </a>
+
+              <a routerLink="/DevExtrem" routerLinkActive="active">Devextreme Crud </a>
+          
+              <a routerLink="/DevDataGrid" routerLinkActive="active">Devextreme Datagrid</a>
+           
+               <a routerLink="/pivotGrid" routerLinkActive="active">Devextreme pivotGrid</a>
+            
+               <a routerLink="/DevxtremeSummary" routerLinkActive="active">Devextreme Group Data Summary</a>
+      
+  
+    </div>
+
+   
+        
+       <router-outlet></router-outlet>
+  
+ 
+   -->

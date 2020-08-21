@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Button Change Detection</h1>
+    <hr>
+<button class="btn-warning" (click)="name = 'Angular change detection Name'">Name change</button>
+<h2>{{name}}</h2>
+
+<button class="btn-danger" (click)="object.name = 'Angular Cd object name'">object value change</button>
+<h2>{{object.name}}</h2>
+<app-button-cd-ch [name]="name" ></app-button-cd-ch>
+</div>

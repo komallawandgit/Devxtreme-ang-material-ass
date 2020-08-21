@@ -1,0 +1,44 @@
+<div class="container"> 
+  <h1>Child To Parent Data Sharing</h1>
+  <hr>
+    <h2 class="text-success bg-light"> parent name by children :::{{mastername}}</h2>
+
+
+    <h3 class="text-primary bg-light bg-light">student data
+        <div class="container bg-light" *ngFor="let stud of studData"> 
+   
+          <h2>{{stud.id}}</h2>
+          <h2>{{stud.name}}</h2>
+          <h2>{{stud.address}}</h2>
+        </div>
+      </h3>
+        <hr>
+        <div class="bg-light">
+          <h3>Counter{{Counter}}</h3>
+        </div>
+    <hr>
+    <h3 class="bg-light text-dark">multiple student
+      <hr>
+      <div class="container">
+        <div class="row">
+
+            <div  class="col-md-3" *ngFor="let ms of  MulStudent">
+                <h3> student Id--{{ms.id}}</h3>
+                <h3>  student Name-- {{ms.name}}</h3>
+                <h3> Student Marks-- {{ms.marks}}</h3>
+                <h3> student std-- {{ms.std}}</h3>
+                 <button class="btn btn-primary" (click)="delete(ms.id)">delete</button>
+                 <hr>
+          
+        </div>
+     
+      </div>
+    </div>
+    </h3>
+  </div>
+
+
+<div class="container">
+<app-child-comp (NameEvent)="sendName($event)"  (studEvent)="getStudent
+($event)"  (couunterEvent)="counterIncrement($event)"  (mulStudevent)="multiStudent($event)"></app-child-comp>
+</div>

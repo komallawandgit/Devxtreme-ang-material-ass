@@ -1,0 +1,27 @@
+{
+    "stud1":[
+        {
+            "sub1":"marathi",
+            "mark":"70"
+            
+        }
+       
+    ],
+    "stud2":[
+
+        {
+            "sub1":"marathi",
+            "mark":"80"
+            
+        }
+       
+    ],
+    "stud3":[
+         {
+            "sub1":"marathi",
+            "mark":"90"
+            
+        }
+      
+    ]
+}

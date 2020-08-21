@@ -1,0 +1,30 @@
+myForm{
+  margin: 5px;
+    width: 100%;
+    padding:20px;
+  }
+   
+  .full-width {
+    width: 100%;
+    padding:5px;
+  }
+  mat-checkbox{
+    padding:  5px;
+  }
+
+  mat-radio-group{
+    padding: 5px;
+
+  }
+  .row{
+    width:100%!important;
+    padding:10px;
+    background-color: azure;
+    margin-bottom: 2px;
+    margin-left: 10%;
+  }
+  button{
+    margin-left: 10%;
+    background-color: azure;
+    margin-bottom: 2px;
+  }

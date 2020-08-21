@@ -1,0 +1,72 @@
+<dx-data-grid id="gridContainer" [dataSource]="dataSource" keyExpr="ID" [allowColumnReordering]="true"
+[showBorders]="true" [allowColumnReordering]="true" [columnAutoWidth]="true"
+   
+    (onRowInserting)="logEvent($event)"
+    (onRowUpdating)="functUpadte($event)"
+    
+     
+>
+    
+    
+    <!-- <dxo-scrolling mode="virtual"></dxo-scrolling> -->
+
+
+    <dxo-editing 
+         mode="row"
+         [allowUpdating]="true"
+         [allowDeleting]="true"
+         [allowAdding]="true"
+         >
+    </dxo-editing>
+    <dxo-search-panel [visible]="true"[highlightCaseSensitive]="true"></dxo-search-panel>
+    <dxo-paging [pageSize]="5"></dxo-paging>
+    <dxo-pager 
+        [showPageSizeSelector]="true"
+        [allowedPageSizes]="[5,10,15]"
+        [showInfo]="true">
+    </dxo-pager>
+    
+    <dxi-column dataField="Prefix" caption="Title">
+            <dxi-validation-rule type="required"></dxi-validation-rule>
+    </dxi-column>
+
+    <dxi-column dataField="FirstName">
+         <!-- <dxi-validation-rule type="required"   labelLocation="top" showValidationSummary="true"></dxi-validation-rule> 
+    </dxi-validation-rule> -->
+    <dxi-validation-rule type="required"></dxi-validation-rule>
+    </dxi-column>
+
+    <dxi-column dataField="LastName">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+    </dxi-column>
+
+    <dxi-column dataField="Position" [width]="130">
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column dataField="StateID" caption="State" [width]="125">         
+        <dxo-lookup [dataSource]="states" displayExpr="Name"  valueExpr="ID">
+        </dxo-lookup>
+        <dxi-validation-rule type="required"></dxi-validation-rule>
+    </dxi-column>
+
+    <dxi-column dataField="BirthDate" [width]="125" dataType="date">
+            <dxi-validation-rule type="required"></dxi-validation-rule>
+    </dxi-column>
+
+ 
+</dx-data-grid>
+
+
+<!-- <div id="events">
+    <div>
+        <div class="caption">
+            Fired events
+        </div>
+        <dx-button id="clear" text="Clear" (onClick)="clearEvents()"></dx-button>
+    </div>
+    <ul>
+        <li *ngFor="let event of events">{{event}}</li>
+    </ul>
+</div> -->
+
+

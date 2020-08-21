@@ -1,0 +1,209 @@
+{ 
+  "clientArray":["client1","client2","client3"],
+    "client1":[
+        {
+            "label":"firstName",
+            "inputType":"text"
+          },
+          {
+            "label":"lastName",
+            "inputType":"text"
+          },
+          {
+            "label":"phone",
+            "inputType":"text"
+          },
+          {
+            "label":"email",
+            "inputType":"text"
+          },
+          {
+            "label":"age-race-onthe-day",
+            "inputType":"text"
+          },
+          {
+            "label":"streetAddress",
+            "inputType":"text"
+          },
+          
+          {
+            "label":"zip",
+            "inputType":"text"
+          },
+          {
+            "label":"city",
+            "inputType":"text"
+          },
+          {
+            "label":"state",
+            "inputType":"text"
+          },
+          
+          {
+            "label":" Gender male",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"female",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"5k walk",
+            "inputType":"checkbox"
+          }, 
+          {
+            "label":"5 k run",
+            "inputType":"checkbox"
+          },
+          {
+             "label":"kids run/walk",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"XS",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"S",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"M",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"L",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"XL",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"XXL",
+            "inputType":"checkbox"
+          }
+
+    ],
+    "client2":[
+
+        {
+            "label":"firstName",
+            "inputType":"text"
+          },
+          
+          {
+            "label":"phone",
+            "inputType":"text"
+          },
+          {
+            "label":"email",
+            "inputType":"text"
+          },
+         
+          {
+            "label":"streetAddress",
+            "inputType":"text"
+          },
+          
+          {
+            "label":"zip",
+            "inputType":"text"
+          },
+          {
+            "label":"city",
+            "inputType":"text"
+          },
+          {
+            "label":"state",
+            "inputType":"text"
+          },
+          
+       
+          {
+            "label":"5k walk",
+            "inputType":"checkbox"
+          }, 
+          {
+            "label":"5 k run",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"kids run/walk",
+            "inputType":"checkbox"
+          }
+
+
+
+    ],
+    "client3":[
+
+        {
+            "label":"firstName",
+            "inputType":"text"
+          },
+         
+          {
+            "label":"phone",
+            "inputType":"text"
+          },
+         
+          {
+            "label":"age-race-onthe-day",
+            "inputType":"text"
+          },
+          {
+            "label":"streetAddress",
+            "inputType":"text"
+          },
+          
+          {
+            "label":"zip",
+            "inputType":"text"
+          },
+          {
+            "label":"city",
+            "inputType":"text"
+          },
+          {
+            "label":"state",
+            "inputType":"text"
+          },
+      
+          {
+            "label":"5k walk",
+            "inputType":"checkbox"
+          }, 
+          {
+            "label":"5 k run",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"kids run/walk",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"XS",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"S",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"M",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"L",
+            "inputType":"checkbox"
+          },
+          {
+            "label":"XL",
+            "inputType":"checkbox"
+          }
+
+    ]
+    
+  
+}

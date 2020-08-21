@@ -1,0 +1,24 @@
+ 
+<hr>
+<h1>Angular Dynamic Element</h1>
+<h3>Registration</h3>
+<hr>
+<hr>
+<div class="container">
+<select class="form-control" [(ngModel)]="myDropDown" (ngModelChange)="onChangeofOptions($event)">
+<option>select Clients</option>
+<option *ngFor="let cl of clientArray">{{cl}}</option>
+</select>
+<h2 class="text-primary">{{myDropDown}}</h2>
+<hr>
+<div class="row" >
+<div  class="col-md-4" *ngFor="let cl1 of  client1 ">
+    <div  *ngIf="cl1.inputType=='text'">
+         {{cl1.label}}:<app-test-field></app-test-field>
+      </div>
+      <div *ngIf="cl1.inputType=='checkbox'">
+         <app-chcekbox></app-chcekbox>:{{cl1.label}}
+    </div>
+</div>
+</div> 
+</div>
